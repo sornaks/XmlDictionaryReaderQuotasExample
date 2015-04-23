@@ -42,7 +42,7 @@ namespace SimpleXMLReader
                 dictionaryQuotas,
                 onClose: null))
             {
-                var serializer = new DataContractSerializer(typeof(DummyClass), new DataContractSerializerSettings());
+                var serializer = new DataContractSerializer(typeof(DummyClass));
                 var obj = serializer.ReadObject(reader) as DummyClass;
 
                 Console.WriteLine(dictionaryQuotas.MaxDepth);
